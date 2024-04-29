@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table table-bordered">
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                
+            </tr>
+            <tr *ngFor="let p of cartarr">
+                    <td>
+                        <img [src]="p.pImg" alt="" height="150px" width="350px">
+                    </td>
+                    <td>
+                        <h3>{{p.pName}}</h3>
+                    </td>
+                    
+            </tr>
+
+           
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <button class="btn bg-success" data-bs-toggle="modal" data-bs-target="#mymodal">
+                    <a routerLink="/navbar/cart" class="nav-link text-white">Book Now</a>    
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+<div class="modal fade"  id="mymodal" >
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: whitesmoke;">
+            <div class="modal-header">
+                <h3>Please Book your Appiontent</h3>
+            </div>
+            <form action="" ngNativeValidate #form>
+            <div class="modal-body">
+                    
+                        <div class="form-group">
+                            <label for="" class="form-label">Name</label>
+                            <input type="text" name="nam" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Date</label>
+                            <input type="date" name="addr" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Mobile number</label>
+                            <input type="text" name="addr" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">your ornamnet Photo(Url)</label>
+                            <input type="text" name="addr" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">your ornament details</label>
+                            <input type="text" name="addr" class="form-control" required>
+                        </div>
+                    
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success d-flex justify-content-center">Cancel</button>
+                <button class="btn btn-success d-flex justify-content-center" (click)="form.checkValidity()&&buy()">Book Now</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+    

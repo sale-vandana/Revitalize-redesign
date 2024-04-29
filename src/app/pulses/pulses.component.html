@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let p of pArray">
+            <div class="card">
+                <div class="card-header">
+                    <img [src]="p.pImg" alt="no img found" height="250px" width="100%">
+                </div>
+                <div class="card-body">
+                    <h4>{{p.pName}}</h4>
+                    <h5>{{p.pQty}}</h5>
+                    
+                </div>
+                <div class="card-footer">
+
+                    <div class="row">
+                        
+                        <div class="col-12 d-flex justify-content-center">
+                            <button class="btn btn-warning" (click)="addtocart(p)">Book Appiontent</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
